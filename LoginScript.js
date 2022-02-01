@@ -17,7 +17,10 @@ const submitLogin = async (event) => {
     }).then(resp => 
         {
             if(resp.status === 200){
-            alert("User logged in sucessfully");
+                document.getElementsByTagName("form")[0].className="form-animated";
+                document.getElementById("status").className="status-animated";
+                alert("User logged in sucessfully");
+
             }
             else {
                 alert("Something went wrong");
