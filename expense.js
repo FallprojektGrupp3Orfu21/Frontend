@@ -4,16 +4,23 @@ let CreateExpenseURL = `https://localhost:7218/api/createExpense`;
 let form = document.getElementById("myForm")
 
 form.onsubmit = (e) => {
-    debugger
     e.preventDefault();
     let expenseName = e.target[0].value;
-    let username = e.target[1].value;
-    let password = e.target[2].value;
+    let expenseAmount = e.target[1].value;
+    let categoryName = e.target[2].value;
+    let expenseDate = e.target[3].value;
+    let username = e.target[4].value;
+    let password = e.target[5].value;
+
     var credentials = btoa(`${username}:${password}`);
     var auth = { "Authorization" : `Basic ${credentials}` };
     
-    const data = {
-    'expenseTitle': expenseTitle
+    const data = 
+    {
+        "title": expenseName,
+        "expenseDate": expenseDate,
+        "amount": expenseAmount,
+        "categoryName": categoryName
     };
     fetch(CreateExpenseURL, {
             method: 'POST', 
