@@ -26,16 +26,5 @@ const submitLogin = async (event) => {
                 alert("Something went wrong");
             }
         })
-        
-    //var credentials = btoa(`${username}:${password}`);
-    //var auth = { "Authorization" : `Basic ${credentials}` };
-    
-    //const result = await fetch(loginUrl,{
-    //    method: "POST",
-    //    mode: "no-cors",
-    //    headers: {
-    //        auth
-    //    }
-   // }).then(resp => console.log(resp));
     
 }
