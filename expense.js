@@ -1,19 +1,19 @@
 // Create expenses manually
 
-let CreateExpenseURL = `https://localhost:7218/api/createExpense`;
-let form = document.getElementById("myForm")
+const CreateExpenseURL = `https://localhost:7218/api/createExpense`;
+const form = document.getElementById("myForm")
 
 form.onsubmit = (e) => {
     e.preventDefault();
-    let expenseName = e.target[0].value;
-    let expenseAmount = e.target[1].value;
-    let categoryName = e.target[2].value;
-    let expenseDate = e.target[3].value;
-    let username = e.target[4].value;
-    let password = e.target[5].value;
+    const expenseName = e.target[0].value;
+    const expenseAmount = e.target[1].value;
+    const categoryName = e.target[2].value;
+    const expenseDate = e.target[3].value;
+    const username = e.target[4].value;
+    const password = e.target[5].value;
 
-    var credentials = btoa(`${username}:${password}`);
-    var auth = { "Authorization" : `Basic ${credentials}` };
+    const credentials = btoa(`${username}:${password}`);
+    const auth = { "Authorization" : `Basic ${credentials}` };
     
     const data = 
     {
