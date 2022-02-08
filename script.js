@@ -1,4 +1,4 @@
-import { Fetcher } from "./UserHandler.js";
+import { registerUser } from "./UserHandler.js";
 let RegisterURL = 'https://localhost:7218/api/create'
 let form = document.getElementById("myForm")
 
@@ -32,7 +32,7 @@ form.onsubmit = (e) => {
     'gender': GenderValue,
     'city': city
     };
-    Fetcher(RegisterURL, {'Content-Type': 'application/json'},JSON.stringify(data),"POST")
+        registerUser(data)
         .then(response => {
             if(response.status === 200) 
             {

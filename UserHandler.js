@@ -1,5 +1,4 @@
 const apiHost = "https://localhost:7218/"
-
 const credentialsAsBase64 = (username,password) => {
     return btoa(`${username}:${password}`);
 } 
@@ -25,4 +24,12 @@ const logout = async (username,password) => {
                           {Authorization:`Basic ${credentialsAsBase64(username,password)}`},
                           "POST")};
 
-export {login, logout, Fetcher}
+const registerUser = (body) => {
+    return await Fetcher(`${apiHost}api/register`, 
+    {'Content-Type': 'application/json'},
+    "POST",JSON.stringify(data))
+}
+const createExpense = () => {
+
+}
+export {login, logout, registerUser, createExpense}
