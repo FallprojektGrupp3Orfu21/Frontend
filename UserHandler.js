@@ -25,4 +25,4 @@ const logout = async (username,password) => {
                           {Authorization:`Basic ${credentialsAsBase64(username,password)}`},
                           "POST")};
 
-export {login, logout}
+export {login, logout, Fetcher}
