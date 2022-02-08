@@ -4,22 +4,25 @@ const credentialsAsBase64 = (username,password) => {
     return btoa(`${username}:${password}`);
 } 
 
+const Fetcher = async (url,theHeaders,method,theBody) =>{
+   const tmp = {
+       method: `${method}`,
+       headers: theHeaders,
+       body: theBody
+   }
+   console.log(tmp);
+   return await fetch(url, tmp);
+}
+  
 const login = async (username,password) => {
-    console.log(`${username},${password}`)
-    return await fetch(`${apiHost}api/login`, {
-        method: 'POST', 
-        headers: {
-        Authorization : `Basic ${credentialsAsBase64(username,password)}` }
-    });
+    return await Fetcher(`${apiHost}api/login`,
+                          {Authorization: `Basic ${credentialsAsBase64(username,password)}`},
+                          "POST" );
 }
 
 const logout = async (username,password) => {
-    return await fetch(`${apiHost}api/logout`,{
-        method: 'POST',
-        headers: {
-            Authorization: `Basic ${credentialsAsBase64(username,password)}`
-        }
-    });
-}
+    return await Fetcher(`${apiHost}api/logout`,
+                          {Authorization:`Basic ${credentialsAsBase64(username,password)}`},
+                          "POST")};
 
 export {login, logout}

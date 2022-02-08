@@ -9,6 +9,7 @@ const submitLogin = async (event) => {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
     const result = await login(username,password);
+    console.log(result);
     if(result.status == 200){
         document.getElementsByTagName("form")[0].className="form-animated";
         document.getElementById("status").className="status-animated";
