@@ -27,7 +27,7 @@ const logout = async (username,password) => {
 const registerUser = (body) => {
     return await Fetcher(`${apiHost}api/register`, 
     {'Content-Type': 'application/json'},
-    "POST",JSON.stringify(data))
+    "POST",JSON.stringify(body))
 }
 const createExpense = () => {
 
