@@ -1,4 +1,6 @@
+import * as ch from "./CredentialsHandler.JS";
 const apiHost = "https://localhost:7218/"
+
 const credentialsAsBase64 = (username,password) => {
     return btoa(`${username}:${password}`);
 } 
@@ -21,13 +23,13 @@ const login = async (username,password) => {
 const logout = async (username,password) => {
     return await Fetcher(`${apiHost}api/logout`,
                           {Authorization:`Basic ${credentialsAsBase64(username,password)}`},
-                          "POST")};
+                          "POST")
+            };
 
 const registerUser = (body) => {
-    const toReturn = Fetcher(`${apiHost}api/register`, 
+    return await Fetcher(`${apiHost}api/register`, 
     {'Content-Type': 'application/json'},
     "POST",JSON.stringify(body))
-    return toReturn;
 }
 const createExpense = () => {
     
