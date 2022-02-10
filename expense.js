@@ -1,5 +1,5 @@
 // Create expenses manually
-
+import {createExpense} from "./FetchHandler.js";
 let CreateExpenseURL = `https://localhost:7218/api/createExpense`;
 let form = document.getElementById("myForm")
 
@@ -12,9 +12,11 @@ form.onsubmit = (e) => {
     var credentials = btoa(`${username}:${password}`);
     var auth = { "Authorization" : `Basic ${credentials}` };
     
-    const data = {
-    'expenseTitle': expenseTitle
-    };
+        const data = {
+        'expenseTitle': expenseTitle
+        };
+
+    createExpense(username,password,data)
     fetch(CreateExpenseURL, {
             method: 'POST', 
             headers: {

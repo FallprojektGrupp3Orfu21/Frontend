@@ -1,4 +1,4 @@
-import { logout } from "./UserHandler.js";
+import { logout } from "./FetchHandler.js";
 window.onload = () => {
     let form = document.getElementsByTagName("form")[0];
     form.onsubmit = submitLogin;

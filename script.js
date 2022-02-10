@@ -1,4 +1,4 @@
-import { registerUser } from "./UserHandler.js";
+import { registerUser } from "./FetchHandler.js";
 let RegisterURL = 'https://localhost:7218/api/create'
 let form = document.getElementById("myForm")
 
