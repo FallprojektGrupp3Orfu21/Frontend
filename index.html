@@ -4,15 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="module" src="index.js"></script>
-    <link rel="stylesheet" href="Style.css">
+    <title>SPA-TESTING</title>
+    <style>
+        #root {
+            margin: 20px 0;
+            padding: 20px;
+            border: 5px solid aquamarine;
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            margin: 5px 0;
+        }
+        table,th,td {
+            margin: 0 auto;
+            border: 1px solid;
+            font-size: 1.1em;           
+            font-weight: bold;
+        }
+        th,td {
+            text-align: left;
+            padding: 0 5px;
+        }
+        tr:nth-child(even){
+            background-color: #ccc;    
+        }
+        form label {
+            margin: 5px auto;
+            display: block;
+        }
+        input {
+            margin: 0 auto;
+            display: block;     
+        }
+        form button {
+            margin-top: 20px;
+        }
+        select {
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>    
-    <div class="target"></div>
+    <div id = 'Heading'>
+        <br>
+        <button id="LoginButton">Login</button>
+        <button id="RegisterButton">Register Account</button>
+        <button id="ExpenseButton">Create Expense</button>
+        <button id="ListExpenseButton">List Expenses</button>
+        <button id="CategoryButton">Create Category</button>
+        <button id="RecipientsButton">Show Recipients</button>
+        <button id="LogoutButton">Logout</button>
+    </div>
+    <div id="root">
+
+    </div>
+    <div id = 'Footing'>
+        
+    </div>
+    <script src="main.js" type="module"></script>
 </body>
 </html>

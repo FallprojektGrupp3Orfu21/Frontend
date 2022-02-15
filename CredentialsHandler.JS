@@ -1,18 +1,27 @@
-const appPrefix = "Economiq"
 const GetUserName = () => {
-    return localStorage.getItem(`${appPrefix}Username`);
+    return localStorage.getItem("username");
 }
 
 const GetPassword = () => {
-    return localStorage.getItem(`${appPrefix}Password`);
+    return localStorage.getItem("password");
 }
 
 const SetUserName = (username) =>{
-    localStorage.setItem(`${appPrefix}Username`,username)
+    localStorage.setItem("username",`${username}`)
 }
 
 const SetPassword = (password) => {
-    localStorage.setItem(`${appPrefix}Password`,password)
+    localStorage.setItem("password",`${password}`)
 }
 
-export{GetPassword,GetUserName,SetPassword,SetUserName}
+const UnsetUsername = () => {
+    localStorage.removeItem("username");
+}
+const UnsetPassword = () => {
+    localStorage.removeItem("password");
+}
+
+const isUserLoggedIn = () => {
+    return (GetUserName() != null) 
+}
+export{GetPassword,GetUserName,SetPassword,SetUserName,UnsetUsername,UnsetPassword, isUserLoggedIn};
