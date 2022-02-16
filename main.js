@@ -3,9 +3,9 @@ import {render as expenseRender} from "./expense.js";
 import {render as categoryRender} from "./category.js"
 import {render as logoutRender} from "./logout.js";
 import {render as registerRender} from "./register.js";
-import {render as listRender } from "./ListExpenses.js";
-import {render as recipientRender} from "./Recipients.js";
-import {render as addRecipientRender} from "./RegisterRecipient.js";
+import {render as listExpensesRender } from "./ListExpenses.js";
+import {render as listRecipientRender} from "./ListRecipients.js";
+import {render as createRecipientRender} from "./createRecipient.js"
 import { registerChangeListener } from "./router.js";
 import { Header } from "./header.js";
 
@@ -31,13 +31,14 @@ registerChangeListener((newPage) =>{
             registerRender(root);
             break;
         case 'ListExpenses':
-            listRender(root);
+            listExpensesRender(root);
             break;
         case 'ListRecipients':
-            recipientRender(root);
+            listRecipientRender(root);
             break;
-        case 'RegisterRecipients':
-            addRecipientRender(root);
+        case 'CreateRecipient':
+            createRecipientRender(root);
+            break;
         default:
             break;
     }

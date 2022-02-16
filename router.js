@@ -8,9 +8,6 @@ export const changePage = (newPage) => {
     }
 };
 
-export const getCurrentPage = () =>{
-
-}
 export const registerChangeListener = (listener) =>{
     listeners.push(listener);
 }

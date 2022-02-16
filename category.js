@@ -1,6 +1,7 @@
 import { createCategory } from "./FetchHandler.js";
-import { GetUserName } from "./CredentialsHandler.JS";
+import { GetUserName } from "./CredentialsHandler.js";
 import { CreateMessageP  } from "./CreateMessageP.js";
+
 export const render = (root) => {
     const divToReturn = document.createElement('div');
     if(!GetUserName()){
@@ -27,13 +28,11 @@ export const render = (root) => {
     
     form.onsubmit = async (e) =>{
         e.preventDefault();
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
         const categoryName = document.getElementById('CategoryName').value;
         const data = {
             'categoryName' : categoryName
         };
-        createCategory(username, password, data)
+        createCategory(data)
             .then(response =>{
                 if(response.status === 200) 
             {

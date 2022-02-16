@@ -51,43 +51,45 @@ const createExpense = async (body) => {
     JSON.stringify(body)
     )
 }
-const createCategory = async (username,password,body) => {
+const createCategory = async (body) => {
     return await Fetcher(`${apiHost}api/createExpenseCategory`,
     {
         'Content-Type': 'application/json',
-        Authorization:`Basic ${credentialsAsBase64(username,password)}`
+        Authorization:`Basic ${credentialsAsBase64(GetUserName(),GetPassword())}`
     },
     'POST',
     JSON.stringify(body)
     )
 };
 const getExpenses = async () => {
-    return [{"Name":"Shoes","Price":"100","Category":"Leisure","Date":"2022-02-12","Recipient": "Mrx"},
-            {"Name":"Dog","Price":"200","Category":"Farming Equipment","Date":"2022-02-12", "Recipient": "Mr Pink"},
-            {"Name":"Donkey","Price":"300","Category":"Domestic Animal","Date":"2022-02-12","Recipient": "Mr White"}]
+    return await Fetcher(`${apiHost}api/expenses`, {
+        'Content-Type': 'application/json',
+        Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
+        
+    },
+    'GET'
+    
+    ).then(response => response.json())
+} 
+
+const createRecipient = async (body) => {
+    return await Fetcher(`${apiHost}api/createRecipient`,
+    {
+        'Content-Type': 'application/json',
+        Authorization:`Basic ${credentialsAsBase64(GetUserName(),GetPassword())}`
+    },
+    'POST',
+    JSON.stringify(body)
+    )
 }
-const CreateRecipient = async (recipientName, recipientCity) => {
-    console.log(`Should post to ${apiHost}api/CreateRecipient using method:POST with the following body \{ "Name": ${recipientName}, "City":${recipientCity}  \}` )
+const getRecipients = async () => {
+    return await Fetcher(`${apiHost}api/listRecipients`, {
+        'Content-Type': 'application/json',
+        Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
+        
+    },
+    'GET'
+    
+    ).then(response => response.json())
 }
-const getRecipients = async (searchString) => {
-    const data = [{
-        "Id":0,
-        "Name": "Mrx",
-        "City": "Stockholm"
-        },
-        {
-            "Id": 1,
-            "Name": "Mr. White",
-            "City": "Los Angeles"
-        },
-        {
-            "Id": 2, 
-            "Name": "Mr.Pink",
-            "City": "Los Angeles"
-        }
-      ]
-      if(searchString == null){
-          return data;
-      }
-}
-export {login, logout, registerUser, createExpense,createCategory,getExpenses, getRecipients}
+export {login, logout, registerUser, createExpense,createCategory,getExpenses, getRecipients, createRecipient}
