@@ -17,7 +17,8 @@ export class Header {
         registerMenuButton('LogoutButton', 'logout');
         registerMenuButton('RegisterButton', 'register');
         registerMenuButton('ListExpenseButton','ListExpenses');
-        registerMenuButton('RecipientsButton','ListRecipients')
+        registerMenuButton('RecipientsButton','ListRecipients');
+        registerMenuButton('RegisterRecipientButton','RegisterRecipients');
         
     }
 }
