@@ -36,3 +36,13 @@ form button {
 select {
   margin-top: 10px;
 }
+
+#Heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Heading button {
+  margin: 0 2em;
+}
