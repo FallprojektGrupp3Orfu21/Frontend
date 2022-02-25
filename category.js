@@ -44,9 +44,6 @@ export const render = (root) => {
             }
             });
         }
-    }
-
-    
-    
+    }    
     root.appendChild(divToReturn);
 }
