@@ -43,7 +43,4 @@ registerChangeListener((newPage) =>{
             break;
     }
 })
-
 loginRender(root);
-
-
