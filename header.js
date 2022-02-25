@@ -7,7 +7,6 @@ const registerMenuButton = (id,page) =>{
         changePage(page);
     });
 }
-
 export class Header {
     constructor(element){
 
