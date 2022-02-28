@@ -37,7 +37,7 @@ const logout = async (username,password) => {
             };
 
 const registerUser = async (body) => {
-    return await Fetcher(`${apiHost}api/create`, 
+    return await Fetcher(`${apiHost}api/createUser`, 
     {'Content-Type': 'application/json'},
     "POST",JSON.stringify(body))
 };
@@ -62,7 +62,7 @@ const createCategory = async (body) => {
     )
 };
 const getExpenses = async () => {
-    return await Fetcher(`${apiHost}api/expenses`, {
+    return await Fetcher(`${apiHost}api/listExpense`, {
         'Content-Type': 'application/json',
         Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
         
