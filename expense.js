@@ -56,8 +56,7 @@ export const render = async (root) => {
             tmp.innerText = recipient.name;
             recipientInput.appendChild(tmp);
         }
-  
-    
+        
     recipientSelectLabel.append(document.createElement("br"),recipientInput,document.createElement("br"));
     let submitButton = document.createElement('button');
     submitButton.type = 'submit';

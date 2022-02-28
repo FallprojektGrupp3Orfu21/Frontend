@@ -36,13 +36,18 @@ form button {
 select {
   margin-top: 10px;
 }
-
-#Heading {
+nav {
   display: flex;
-  align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+nav button {
+  cursor: pointer;
+  margin: 1em;
 }
 
-#Heading button {
-  margin: 0 2em;
+@media screen and (min-width: 800px){
+  nav {
+     flex-direction: row;
+  }
 }
