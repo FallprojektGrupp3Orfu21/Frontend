@@ -47,25 +47,25 @@ export const render = async (root) => {
     let br8 = document.createElement('br');
     const recipientSelectLabel = document.createElement("label");
     recipientSelectLabel.textContent ="Pick recipient of expense";
-    const recipientInput = document.createElement("select");
-    recipientInput.id = 'recipient';
+    const recipientInput = document.createElement("input");
+    const recipientList = document.createElement("datalist");
+    recipientList.id = "recipient-list";
+    recipientInput.setAttribute("list","recipient-list");
     let x = await getRecipients()
-    
-        for (const recipient of x) {
-            const tmp = document.createElement("option");
-            tmp.value = recipient.name;
-            tmp.innerText = recipient.name;
-            recipientInput.appendChild(tmp);
-        }
-        
+       for (const recipient of x) {
+            const option = document.createElement("option");
+            option.value = recipient.name;
+            option.innerText = recipient.name;
+            option.innerText = recipient.name;
+           recipientList.appendChild(option);
+        }   
     recipientSelectLabel.append(document.createElement("br"),recipientInput,document.createElement("br"));
     let submitButton = document.createElement('button');
     submitButton.type = 'submit';
     submitButton.textContent = 'Create Expense'
 
-    form.append(header, expenseTitleLabel, expenseAmountLabel, expenseCategoryNameLabel, expenseDateLabel,recipientSelectLabel , submitButton);
+    form.append(header, expenseTitleLabel, expenseAmountLabel, expenseCategoryNameLabel, expenseDateLabel,recipientSelectLabel , submitButton,recipientList);
     divToReturn.appendChild(form);
-    
     form.onsubmit = async (e) =>{
         e.preventDefault();
         const expenseTitle = document.getElementById('expenseTitle').value;
