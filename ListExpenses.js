@@ -37,7 +37,7 @@ const divToReturn = document.createElement("div");
                 let td4 = document.createElement("td");
                 td4.textContent = expense.expenseDate;
                 let td5 = document.createElement("td");
-                td5.textContent=expense.Recipient;
+                td5.textContent=expense.recipientName;
                 [td1,td2,td3,td5,td4].forEach(td => tmp.appendChild(td));
                 theList.appendChild(tmp);
             }
