@@ -82,14 +82,28 @@ const createRecipient = async (body) => {
     JSON.stringify(body)
     )
 }
-const getRecipients = async () => {
-    return await Fetcher(`${apiHost}api/listRecipients`, {
-        'Content-Type': 'application/json',
-        Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
+// const getRecipients = async () => {
+//     return await Fetcher(`${apiHost}api/listRecipients`, {
+//         'Content-Type': 'application/json',
+//         Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
         
-    },
-    'GET'
+//     },
+//     'GET'
     
-    ).then(response => response.json())
+//     ).then(response => response.json())
+// }
+
+const getRecipients = (queryString = null) => {
+    const recipients = [{name:"Mr X"},{name:"Mr Y"},{name:"Mr Z"},{name:"Mr. White"},{name:"Coop Tumba"},{name:"Coop Morgongåva"},{name:"Ica Nora"}];
+    if(queryString == null){
+        return recipients
+    }
+    else {
+        return recipients.filter(x => x.startsWith(queryString))
+    }
 }
+
+
+
+
 export {login, logout, registerUser, createExpense,createCategory,getExpenses, getRecipients, createRecipient}
