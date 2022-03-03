@@ -48,6 +48,7 @@ export const render = async (root) => {
     const recipientSelectLabel = document.createElement("label");
     recipientSelectLabel.textContent ="Pick recipient of expense";
     const recipientInput = document.createElement("select");
+    recipientInput.id = 'recipient';
     let x = await getRecipients()
     
         for (const recipient of x) {
@@ -70,12 +71,14 @@ export const render = async (root) => {
         const expenseTitle = document.getElementById('expenseTitle').value;
         const expenseAmount = document.getElementById('expenseAmount').value;
         const expenseCategoryName = document.getElementById('expenseCategoryName').value;
-        const expenseDate = document.getElementById('expenseDate').value;     
+        const expenseDate = document.getElementById('expenseDate').value;    
+        const recipientName = document.getElementById('recipient') .value;
         const data = {
             'title' : expenseTitle,
             'expenseDate' : expenseDate,
             'amount' : expenseAmount,
-            'categoryName' : expenseCategoryName
+            'categoryName' : expenseCategoryName,
+            'recipientName' : recipientName
         };
         createExpense(data)
             .then(response =>{
@@ -91,4 +94,5 @@ export const render = async (root) => {
         }
     }
     root.appendChild(divToReturn);
+    
 }
