@@ -93,13 +93,13 @@ const createRecipient = async (body) => {
 //     ).then(response => response.json())
 // }
 
-const getRecipients = (queryString = null) => {
+const getRecipients = async (queryString = null) => {
     const recipients = [{name:"Mr X"},{name:"Mr Y"},{name:"Mr Z"},{name:"Mr. White"},{name:"Coop Tumba"},{name:"Coop Morgongåva"},{name:"Ica Nora"}];
     if(queryString == null){
         return recipients
     }
     else {
-        return recipients.filter(x => x.startsWith(queryString))
+        return recipients.filter(x => x.name.toLowerCase().startsWith(queryString.toLowerCase()))
     }
 }
 
