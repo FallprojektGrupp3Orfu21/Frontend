@@ -73,12 +73,11 @@ export const render = async (root) => {
             recipientInput.value=queryString;
             recipientInput.focus();
         })
-        let recipents = await getRecipients();
-    for(const recipient of recipents){
-        const option = document.createElement("option");
-        option.value = recipient.name;
-        recipientList.appendChild(option);
-    }
+    //for(const recipient of recipents){
+    //    const option = document.createElement("option");
+    //    option.value = recipient.name;
+    //    recipientList.appendChild(option);
+    //}
         /*var observer = new MutationObserver(async (mutations) =>{
             if (document.contains(recipientInput)) {
                 let x = await getRecipients();
@@ -117,20 +116,19 @@ export const render = async (root) => {
                  observer.disconnect();
              }
          });
-         observer.observe(document, {attributes: false, childList: true, characterData: false, subtree:true});
-    //let x = await getRecipients()
-    //   for (const recipient of x) {
-    //        const option = document.createElement("option");
-    //        option.value = recipient.name;
-    //        option.innerText = recipient.name;
-    //        option.innerText = recipient.name;
-    //       recipientList.appendChild(option);
-    //    } */   
+         observer.observe(document, {attributes: false, childList: true, characterData: false, subtree:true});*/
+    let x = await getRecipients()
+       for (const recipient of x) {
+            const option = document.createElement("option");
+            option.value = recipient.name;
+            option.innerText = recipient.name;
+            option.innerText = recipient.name;
+           recipientList.appendChild(option);
+        }    
     recipientSelectLabel.append(document.createElement("br"),recipientInput,document.createElement("br"));
     let submitButton = document.createElement('button');
     submitButton.type = 'submit';
     submitButton.textContent = 'Create Expense'
-
     form.append(header, expenseTitleLabel, expenseAmountLabel, expenseCategoryNameLabel, expenseDateLabel,recipientSelectLabel , submitButton,recipientList);
     divToReturn.appendChild(form);
     form.onsubmit = async (e) =>
