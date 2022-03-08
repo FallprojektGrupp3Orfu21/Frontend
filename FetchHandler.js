@@ -82,26 +82,15 @@ const createRecipient = async (body) => {
     JSON.stringify(body)
     )
 }
-// const getRecipients = async () => {
-//     return await Fetcher(`${apiHost}api/listRecipients`, {
-//         'Content-Type': 'application/json',
-//         Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
-        
-//     },
-//     'GET'
-    
-//     ).then(response => response.json())
-// }
-
-const getRecipients = async (queryString = null) => {
-    const recipients = [{name:"Mr X"},{name:"Mr Y"},{name:"Mr Z"},{name:"Mr. White"},{name:"Coop Tumba"},{name:"Coop Morgongåva"},{name:"Ica Nora"}];
-    //'https://localhost:7218/api/listRecipients?searchString=MrX'
-    const tempReceps = await Fetcher(`${apiHost}api/listRecipents`,{
+const getRecipients = async () => {
+    return await Fetcher(`${apiHost}api/listRecipients`, {
         'Content-Type': 'application/json',
-        Authorization:`Basic ${credentialsAsBase64(GetUserName(),GetPassword())}`
-    },'GET')
-    console.log(tempReceps);
+        Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
+        
+    },
+    'GET'
     
+    ).then(response => response.json())
 }
 
 

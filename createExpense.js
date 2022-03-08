@@ -48,6 +48,7 @@ export const render = async (root) => {
         const recipientSelectLabel = document.createElement("label");
         recipientSelectLabel.textContent ="Pick recipient of expense";
         const recipientInput = document.createElement("input");
+        recipientInput.id = "recipientInput";
         const recipientList = document.createElement("datalist");
         recipientInput.setAttribute("autocomplete","off");
         recipientList.id = "recipient-list";
