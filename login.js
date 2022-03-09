@@ -53,13 +53,11 @@ export const render = (root) => {
             .then(response =>{
                 if(response.status === 200) 
             {
-                alert('Login Successful');
+                
                 changePage("login");
             } 
-            else
-            {
-                alert('Something went wrong!');
-            }
+          
+            
             });
     }
 }

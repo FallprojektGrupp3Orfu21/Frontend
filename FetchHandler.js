@@ -21,7 +21,14 @@ const login = async (username,password) => {
     if(resp.status == 200){
         SetUserName(username);
         SetPassword(password);
-    }
+
+    } 
+        resp.text().then(function (text) {
+            alert(text);
+        });
+    
+ 
+    
     return resp;
 };
 
@@ -33,67 +40,92 @@ const logout = async (username,password) => {
                 UnsetUsername();
                 UnsetPassword();
             }
+                resp.text().then(function (text) {
+                    alert(text);
+                 });
+        
+            
             return resp;
             };
 
 const registerUser = async (body) => {
-    return await Fetcher(`${apiHost}api/createUser`, 
-    {'Content-Type': 'application/json'},
-    "POST",JSON.stringify(body))
+    const resp = await Fetcher(`${apiHost}api/createUser`, 
+                        {'Content-Type': 'application/json'},
+                        "POST",
+                        JSON.stringify(body))
+                        if(resp.status!=200){
+                            resp.text().then(x => alert(x));
+                            };
+                        return resp;
+    
+
 };
 const createExpense = async (body) => {
-    return await Fetcher(`${apiHost}api/createExpense`,
+    const resp = await Fetcher(`${apiHost}api/createExpense`,
     {
         'Content-Type': 'application/json',
         Authorization:`Basic ${credentialsAsBase64(GetUserName(),GetPassword())}`
     },
     'POST',
     JSON.stringify(body)
-    )
+    );
+   
+    return resp;
 }
 const createCategory = async (body) => {
-    return await Fetcher(`${apiHost}api/createExpenseCategory`,
+    const resp = await Fetcher(`${apiHost}api/createExpenseCategory`,
     {
         'Content-Type': 'application/json',
         Authorization:`Basic ${credentialsAsBase64(GetUserName(),GetPassword())}`
     },
     'POST',
     JSON.stringify(body)
-    )
+    );
+   
+    return resp;
 };
-const getExpenses = async () => {
-    return await Fetcher(`${apiHost}api/listExpense`, {
-        'Content-Type': 'application/json',
-        Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
+
+
+    const getExpenses = async () => {
+        const resp = await Fetcher(`${apiHost}api/listExpense`, {
+            'Content-Type': 'application/json',
+            Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
+            
+        },
+        'GET'
         
-    },
-    'GET'
+        ).then(response => response.json());
+       
+        return resp;
+    } 
     
-    ).then(response => response.json())
-} 
+    
+
 
 const createRecipient = async (body) => {
-    return await Fetcher(`${apiHost}api/createRecipient`,
+    const resp = await Fetcher(`${apiHost}api/createRecipient`,
     {
         'Content-Type': 'application/json',
         Authorization:`Basic ${credentialsAsBase64(GetUserName(),GetPassword())}`
     },
     'POST',
     JSON.stringify(body)
-    )
+    );
+   
+     return resp;
 }
 const getRecipients = async () => {
-    return await Fetcher(`${apiHost}api/listRecipients`, {
+    const resp = await Fetcher(`${apiHost}api/listRecipients`, {
         'Content-Type': 'application/json',
         Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
         
     },
     'GET'
     
-    ).then(response => response.json())
+    ).then(response => response.json());
+   
+    return resp;
+    
+    
 }
-
-
-
-
 export {login, logout, registerUser, createExpense,createCategory,getExpenses, getRecipients, createRecipient}

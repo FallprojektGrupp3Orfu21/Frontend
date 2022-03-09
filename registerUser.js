@@ -101,10 +101,7 @@ export const render = (root) => {
             {
                 alert('Account Successfully Created!')
             } 
-            else
-            {
-                alert('Something went wrong!')
-            }
+           
             });
     }
 

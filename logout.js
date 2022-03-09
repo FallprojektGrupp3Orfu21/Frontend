@@ -9,12 +9,11 @@ export const render = (root) => {
         LogoutButton.onclick = (event) => {
             logout(GetUserName(), GetPassword()).then( (resp)=> {
             if(resp.status === 200){
-                alert("User logged out")
+                
                 changePage("login");
             }
-            else {
-                alert("Something went wrong");
-            }
+            
+            
             })}
         divToReturn.appendChild(LogoutButton);
     }
