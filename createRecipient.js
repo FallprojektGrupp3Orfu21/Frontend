@@ -2,6 +2,7 @@ import { createRecipient } from "./FetchHandler.js";
 import { GetUserName } from "./CredentialsHandler.js";
 import { CreateMessageP } from "./CreateMessageP.js";
 
+
 export const render = (root) => {
     const divToReturn = document.createElement('div');
     if (!GetUserName()) {

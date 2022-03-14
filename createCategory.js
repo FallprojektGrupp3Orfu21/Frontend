@@ -2,14 +2,20 @@ import { createCategory } from "./FetchHandler.js";
 import { GetUserName } from "./CredentialsHandler.js";
 import { CreateMessageP  } from "./CreateMessageP.js";
 
+const cssModule = await import('./css/CreateCategory.css', {
+    assert: { type: 'css' }
+  });
+  document.adoptedStyleSheets = [cssModule.default];
 
 export const render = (root) => {
+    
 
     const divToReturn = document.createElement('div');
     if(!GetUserName()){
         divToReturn.appendChild(CreateMessageP("Please login to be able to register a new category"))
     }
     else {
+        
         
     const form = document.createElement('form');
     const header = document.createElement('h3');
@@ -47,6 +53,8 @@ export const render = (root) => {
             }
             });
         }
+        
     }    
+    
     root.appendChild(divToReturn);
 }
