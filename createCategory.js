@@ -12,7 +12,7 @@ export const render = (root) => {
 
     const divToReturn = document.createElement('div');
     if(!GetUserName()){
-        divToReturn.appendChild(CreateMessageP("Please login to be able to register a new category"))
+        divToReturn.appendChild(CreateMessageP("Please login to register a new category"))
     }
     else {
         
