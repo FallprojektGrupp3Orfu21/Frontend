@@ -1,6 +1,6 @@
 form {
     margin: 0 auto;
-    margin: 20px 0;
+    margin: 5px 0;
     background-color: #6b1441; 
     padding-bottom: 10px;
     padding-top: 10px;
@@ -8,8 +8,10 @@ form {
     font-family: Verdana;
     font-size: small;
   
+  } 
+  form button {
+    margin-top: 20px;
   }
-  
   
   h3
   {
@@ -18,6 +20,19 @@ form {
     color: white;
   
   }
+  select {
+    margin-top: 10px;
+    
+  }
 
+  form label {
+    margin: 5px auto;
+    display: block;
+  }
+  input,select {
+    margin: 0 auto;
+    display: block;    
+       
+  }
   
  
