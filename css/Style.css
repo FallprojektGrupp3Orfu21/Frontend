@@ -28,13 +28,16 @@ form label {
 }
 input,select {
   margin: 0 auto;
-  display: block;     
+  display: block;    
+   
+  
 }
 form button {
   margin-top: 20px;
 }
 select {
   margin-top: 10px;
+  
 }
 nav {
   display: flex;
@@ -51,3 +54,6 @@ nav button {
      flex-direction: row;
   }
 }
+
+
+

@@ -2,7 +2,7 @@ import { createCategory } from "./FetchHandler.js";
 import { GetUserName } from "./CredentialsHandler.js";
 import { CreateMessageP  } from "./CreateMessageP.js";
 
-const cssModule = await import('./css/CreateCategory.css', {
+const cssModule = await import('./css/Forms.css', {
     assert: { type: 'css' }
   });
   document.adoptedStyleSheets = [cssModule.default];
