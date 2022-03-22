@@ -5,10 +5,10 @@ export const render = (root) => {
     const divToReturn = document.createElement('div');
     const form = document.createElement('form');
     const header = document.createElement('h3');
-    header.innerText = 'Enter information below to create an Account';
+    header.innerText = 'Enter information to create Account';
    
     let fNameLabel = document.createElement('label');
-    fNameLabel.innerText ="Enter surname"
+    fNameLabel.innerText ="Enter firstname"
     let fNameInput = document.createElement('input');
     fNameInput.type = 'text';
     fNameInput.placeholder = 'First Name';
@@ -16,7 +16,7 @@ export const render = (root) => {
     fNameInput.required = true;
     fNameLabel.appendChild(fNameInput);
     let lNameLabel = document.createElement('label');
-    lNameLabel.textContent ="Enter family name";
+    lNameLabel.textContent ="Enter lastname";
     let lNameInput = document.createElement('input');
     lNameInput.type = 'text';
     lNameInput.id = 'lName';

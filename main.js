@@ -1,11 +1,11 @@
 import { render as loginRender} from "./login.js";
 import {render as expenseRender} from "./createExpense.js";
-import {render as categoryRender} from "./createCategory.js"
+import {render as categoryRender} from "./createCategory.js";
 import {render as logoutRender} from "./logout.js";
 import {render as registerRender} from "./registerUser.js";
 import {render as listExpensesRender } from "./ListExpenses.js";
 import {render as listRecipientRender} from "./ListRecipients.js";
-import {render as createRecipientRender} from "./createRecipient.js"
+import {render as createRecipientRender} from "./createRecipient.js";
 import { registerChangeListener } from "./router.js";
 import { Header } from "./header.js";
 

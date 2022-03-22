@@ -18,7 +18,6 @@ const login = async (username,password) => {
     const resp = await Fetcher(`${apiHost}api/login`,
                           {Authorization: `Basic ${credentialsAsBase64(username,password)}`},
                           "POST" );
-    resp.text().then(x => alert(x));
     if(resp.status == 200){
         SetUserName(username);
         SetPassword(password);
