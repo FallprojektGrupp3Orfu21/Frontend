@@ -9,15 +9,38 @@
 </head>
 <body>
     <header>    
-        <nav>
-        <button id="LoginButton">Login</button>
-        <button id="RegisterButton">Register Account</button>
-        <button id="ExpenseButton">Create Expense</button>
-        <button id="ListExpenseButton">List Expenses</button>
-        <button id="CategoryButton">Create Category</button>
-        <button id="CreateRecipientButton">Create Recipient</button>
-        <button id="RecipientsButton">Show Recipients</button>
-        <button id="LogoutButton">Logout</button>
+        <nav class ="navbar-top">
+            <div class ="wrapper-menu-buttons">
+                <div class="dropdown">
+                    <button class="menu-button">Expense</button>
+                    <div class="dropdown-content">
+                        <button id="ExpenseButton">Create Expense</button>
+                        <button id="ListExpenseButton">List Expenses</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="menu-button">Recipients</button>
+                    <div class="dropdown-content">
+                        <button id="CreateRecipientButton">Create Recipient</button>
+                        <button id="RecipientsButton">Show Recipients</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="menu-button">Category</button>
+                    <div class="dropdown-content">
+                        <button id="CategoryButton">Create Category</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="wrapper-account-related">
+                <button id="LoginButton" class="AccountButtons">Login</button>
+                <button id="RegisterButton" class="AccountButtons">Sign Up</button>
+                <button id="LogoutButton" class="AccountButtons">Logout</button>
+            </div>
+        
+    
+        
         </nav>
     </header>
     <div id="root">

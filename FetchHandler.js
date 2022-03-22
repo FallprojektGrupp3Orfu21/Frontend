@@ -114,18 +114,15 @@ const createRecipient = async (body) => {
    
      return resp;
 }
-const getRecipients = async () => {
-    const resp = await Fetcher(`${apiHost}api/listRecipients`, {
+
+const getRecipients = async(searchString = null) => {
+    const request = `${apiHost}api/listRecipients` + (searchString ? `?searchString=${searchString}` : '');
+    const resp = await Fetcher(request, {
         'Content-Type': 'application/json',
-        Authorization:`Basic ${credentialsAsBase64(GetUserName(), GetPassword())}`,
-        
-    },
-    'GET'
-    
-    ).then(response => response.json());
-   
-    return resp;
-    
-    
+        Authorization: `Basic ${credentialsAsBase64(GetUserName(),GetPassword())}`
+    }, 'GET');  
+    return resp.json();
 }
-export {login, logout, registerUser, createExpense,createCategory,getExpenses, getRecipients, createRecipient}
+
+
+ export {login, logout, registerUser, createExpense,createCategory,getExpenses, getRecipients, createRecipient}
