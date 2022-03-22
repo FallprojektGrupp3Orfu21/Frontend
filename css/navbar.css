@@ -1,0 +1,45 @@
+
+.navbar-top{
+    display:flex;
+    background-color: #6b1441;
+    min-height: 3rem;
+}
+.wrapper-menu-buttons{
+    flex: 1 0 85%;
+}
+.wrapper-account-related{
+    flex: 1 0 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+.AccountButtons{
+    margin-left:5%;
+}
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}
+.menu-button{
+    width: 200px;
+}
+    
