@@ -5,10 +5,10 @@
     min-height: 3rem;
 }
 .wrapper-menu-buttons{
-    flex: 1 0 50%;
+    flex: 1 0 70%;
 }
 .wrapper-account-related{
-    flex: 1 0 50%;
+    flex: 1 0 30%;
     display: flex;
     justify-content: flex-end;
     background-image: linear-gradient(to right, #6b1441 , #380921);
@@ -24,13 +24,13 @@
     font-size: 16px;
 }
 #LogoutButton{
-    background-color: #380921;
+    background-color: #3d0a24;
 }
 #RegisterButton{
-    background-color: #3b0a23;
+    background-color: #410b27;
 }
 #LoginButton{
-    background-color: #3f0b26;
+    background-color: #4b0d2d;
 }
 #LoginButton:hover,#RegisterButton:hover, #LogoutButton:hover{
     background-color: #6b1441;
