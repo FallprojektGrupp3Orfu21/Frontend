@@ -3,15 +3,17 @@
 @import "Table.css"; 
 
 #root {
-  padding: 60px;
-  border: 5px solid #6b1441;
+  padding: 10px;
+  border: 3px solid #6b1441;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   border-radius: 10px;
+  
 }
 
 body{
   margin:10px;
+ 
 }
 
 .texten{
@@ -21,6 +23,11 @@ float:right;
 font-family: 'Verdana', sans-serif;
 margin-right: 40px;
 
+}
+
+.row{
+
+padding: 0px;
 }
 
 nav {
@@ -43,19 +50,15 @@ nav button {
   position:bottom;
   bottom:100px;
   width:100%;
-  height:120px;   /* Height of the footer */
-  border-radius: 20px;
+  height:100px;   /* Height of the footer */
+  border-radius: 10px;
   background-image: linear-gradient(to right, #6b1441 , #380921);
 
 }
-.logo2{
-  display: flex;
-  float: right;
-  align-items: flex-end;
 
 
 
-}
+
 
 .animate-charcter
 {
