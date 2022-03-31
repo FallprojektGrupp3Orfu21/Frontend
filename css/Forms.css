@@ -2,7 +2,7 @@ form {
   margin: auto;
   background-color: white;
   padding-bottom: 10x;
-  padding-top: 10px;
+  padding-top: 0px;
   color: #6b1441;
   font-family: Montserrat, sans-serif;
   width: 30%;
@@ -29,13 +29,15 @@ form button:hover {
 
 h1 {
   font-family: Montserrat, sans-serif;
-
+  padding: 0px;
 }
 
 h3 {
   background-color:#6b1441;
   color: white;
- padding: 10px;
+
+  font-style: bold;
+ padding: 5px;
 
 }
 
