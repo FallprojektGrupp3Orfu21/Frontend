@@ -8,7 +8,8 @@ table,th,td {
     border: 1px solid;
     font-size: 1.1em;           
     font-weight: bold;
-  }
+}
+
 table {
     font-family: Montserrat, sans-serif;
     color: #6b1441;
@@ -16,7 +17,6 @@ table {
     border: 5px solid #6b1441;
     border-radius: 10px;
     padding: 50px;
-    
 }
 
 th {
@@ -41,7 +41,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color:#c78fac;
+    background-color:#cc1775;
     transform: scale(1.1);
     color: white;
 }
