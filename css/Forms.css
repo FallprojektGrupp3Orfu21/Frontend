@@ -1,25 +1,26 @@
 form { 
-  margin: 0 auto;
+  margin: auto;
   background-color: white;
-  padding-bottom: 10px;
+  padding-bottom: 10x;
   padding-top: 10px;
   color: #6b1441;
   font-family: Montserrat, sans-serif;
   width: 30%;
-  border: 5px solid #6b1441;
+  border: 3px solid #6b1441;
   border-radius: 10px;
-  font-weight: bold;
-  font-size: 30px;
+
+  font-size: 14px;
 }
 
 form button {
   border-radius: 10px;
   background-color: #6b1441;
   color: white;
-  height: 50px;
+  height: 40px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: 15px;
+  margin-bottom: 10px;
 }
 
 form button:hover {
@@ -28,22 +29,26 @@ form button:hover {
 
 h1 {
   font-family: Montserrat, sans-serif;
+
 }
 
 h3 {
   background-color:#6b1441;
   color: white;
+
 }
 
 select {
-  margin-top: 10px;  
+  margin-top: 0px;  
 }
 
 form label {
   margin: 5px auto;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   padding: 2%;
+  font-size: 14px;
+  color:#6b1441;
 
 }
 

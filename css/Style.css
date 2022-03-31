@@ -3,7 +3,7 @@
 @import "Table.css"; 
 
 #root {
-  padding: 100px;
+  padding: 60px;
   border: 5px solid #6b1441;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -11,7 +11,16 @@
 }
 
 body{
-  margin:0px;
+  margin:10px;
+}
+
+.texten{
+color: white;
+font-size: 12px;
+float:right;
+font-family: 'Verdana', sans-serif;
+margin-right: 40px;
+
 }
 
 nav {
@@ -31,11 +40,21 @@ nav button {
 }
 
 #footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
+  position:bottom;
+  bottom:100px;
+  width:100%;
+  height:120px;   /* Height of the footer */
+  border-radius: 20px;
   background-image: linear-gradient(to right, #6b1441 , #380921);
+
+}
+.logo2{
+  display: flex;
+  float: right;
+  align-items: flex-end;
+
+
+
 }
 
 .animate-charcter
@@ -47,9 +66,9 @@ nav button {
     #6b1441 100%
   );
 
-  background-size: auto auto;
+  background-size: 100px;
   background-clip: border-box;
-  background-size: 200% auto;
+  background-size: 100% ;
   color: #6b1441;
   background-clip: text;
   text-fill-color: transparent;
@@ -57,9 +76,9 @@ nav button {
   -webkit-text-fill-color: transparent;
   animation: textclip 3s linear infinite;
   display: inline-block;
-      font-size: 100px;
-      font-family: Verdana;
-margin-left: 40%;
+      font-size: 40px;
+      font-family: Monsterrat;
+     padding-left: 525px;
 }
 
 @keyframes textclip {
@@ -70,7 +89,9 @@ margin-left: 40%;
 
 img {
   display: flex;
-  align-items: end;
-  max-width: 10%;
+  max-width: 50px;
+  align-items: flex-start;
+  max-width: 50%;
  width: 100px;
+ height: 100%;
 }
