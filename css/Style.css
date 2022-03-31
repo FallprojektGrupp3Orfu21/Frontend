@@ -8,6 +8,7 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   border-radius: 10px;
+
   }
 
 body{
@@ -46,14 +47,19 @@ nav button {
 }
 
 #footer {
-  position:absolute;
+  display: flex;
+position: absolute;
+align-items: center;
+margin-bottom: 11px;
+  justify-content: left;
+  /* position:absolute;
   margin-top: 20px;
   bottom:10px;
   width:99%;
   height:70px;   /* Height of the footer */
-  border-radius: 50px;
+  /* border-radius: 50px;
   background-image: linear-gradient(to right, #6b1441 , #380921);
-  margin-top: 0px;
+  margin-top: 0px; */ 
 }
 .animate-charcter
 {
@@ -91,5 +97,5 @@ img {
   align-items: flex-start;
   max-width: 50%;
  width: 100px;
- height: 90%;
+ height: 0%;
 }
