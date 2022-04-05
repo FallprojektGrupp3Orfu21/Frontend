@@ -98,6 +98,20 @@ const createCategory = async (body) => {
        
         return resp;
     } 
+
+
+    const getFilterExpenses = async (body) => {
+        const resp = await Fetcher(`${apiHost}api/listFilteredExpenses`,
+        {
+            'Content-Type': 'application/json',
+            Authorization:`Basic ${credentialsAsBase64(GetUserName(),GetPassword())}`
+        },
+        'POST',
+        JSON.stringify(body)
+        ).then(response => response.json())
+         return resp;
+    }
+    
     
     
 
@@ -125,4 +139,4 @@ const getRecipients = async(searchString = null) => {
 }
 
 
- export {login, logout, registerUser, createExpense,createCategory,getExpenses, getRecipients, createRecipient}
+ export {login, logout, registerUser, createExpense,createCategory,getExpenses, getRecipients, createRecipient, getFilterExpenses}
