@@ -1,28 +1,31 @@
 h1 {
     font-family: Montserrat, sans-serif;
     color: #6b1441;
+    font-style: oblique;
+    font-size: 20px;
 }
 
 table,th,td {
     margin: 0 auto;
     border: 1px solid;
-    font-size: 1.1em;           
+    font-size: 1.0em;           
     font-weight: bold;
-  }
+}
+
 table {
     font-family: Montserrat, sans-serif;
     color: #6b1441;
     width: 60%;
     border: 5px solid #6b1441;
     border-radius: 10px;
-    padding: 50px;
+    padding: 23px;
     
 }
 
 th {
     background-color: #6b1441;
     color: white;
-    font-size: 20px;
+    font-size: 13px;
     text-transform: uppercase;
     height: 50px;
     text-align: center;
@@ -34,6 +37,7 @@ tr {
     height: 50px;
     background-color: white;
     border-collapse: collapse;
+
 }
 
 tr:nth-child(even) {
@@ -41,7 +45,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color:#c78fac;
+    background-color:#cc1775;
     transform: scale(1.1);
     color: white;
 }

@@ -10,7 +10,7 @@ export const render = async (root) => {
     {
         const form = document.createElement('form');
         const header = document.createElement('h3');
-        header.innerText = 'Enter information below to create an Expense';
+        header.innerText = 'Create Expense';
         let expenseTitleLabel = document.createElement('label');
         expenseTitleLabel.textContent = `Enter expense name`
         let expenseTitleInput = document.createElement('input');

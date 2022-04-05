@@ -3,14 +3,31 @@
 @import "Table.css"; 
 
 #root {
-  margin: 20px 10px;
-  padding: 20px;
-  border: 5px solid #6b1441;
+  padding: 10px;
+  border: 3px solid #6b1441;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-}
+  border-radius: 10px;
+
+  }
+
 body{
-  margin:0px;
+  margin:10px;
+ 
+}
+
+.texten{
+color: white;
+font-size: 12px;
+float:right;
+font-family: 'Verdana', sans-serif;
+margin-right: 40px;
+
+}
+
+.row{
+
+padding: 0px;
 }
 
 
@@ -19,9 +36,9 @@ nav {
   justify-content: center;
   flex-direction: column;
 }
+
 nav button {
   cursor: pointer;
-  
 }
 
 @media screen and (min-width: 800px){
@@ -30,5 +47,56 @@ nav button {
   }
 }
 
+#footer {
+  display: flex;
+position: absolute;
+align-items: center;
+margin-bottom: 11px;
+  justify-content: left;
+  /* position:absolute;
+  margin-top: 20px;
+  bottom:10px;
+  width:99%;
+  height:70px;   /* Height of the footer */
+  /* border-radius: 50px;
+  background-image: linear-gradient(to right, #6b1441 , #380921);
+  margin-top: 0px; */ 
+}
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    #c88bd8 0%,
+    #6b1441 50%,
+    #6b1441 100%
+  );
 
+  background-size: 100px;
+  background-clip: border-box;
+  background-size: 100% ;
+  color: #6b1441;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  display: inline-block;
+      font-size: 40px;
+      font-family: Monsterrat;
+     padding-left: 525px;
+}
 
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+img {
+  display: flex;
+
+  align-items: flex-start;
+  max-width: 50%;
+ width: 100px;
+ height: 0%;
+}

@@ -12,9 +12,10 @@ export const render = (root) => {
     else {
         const form = document.createElement('form');
         const header = document.createElement('h3');
-        header.innerText = 'Enter information below to add a recipient';
+        header.innerText = 'Create recipient';
 
         let recipientNameLabel = document.createElement('label');
+        recipientNameLabel.textContent = `Enter recipient name`
         let recipientNameInput = document.createElement('input');
         recipientNameInput.type = 'text';
         recipientNameInput.placeholder = 'Recipient Name';
@@ -23,6 +24,7 @@ export const render = (root) => {
         recipientNameLabel.appendChild(recipientNameInput);
 
         let recipientCityLabel = document.createElement('label');
+        recipientCityLabel.textContent = `Enter recipient city`
         let recipientCityInput = document.createElement('input');
         recipientCityInput.type = 'text';
         recipientCityInput.placeholder = 'City';

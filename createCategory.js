@@ -15,9 +15,10 @@ export const render = (root) => {
         
     const form = document.createElement('form');
     const header = document.createElement('h3');
-    header.innerText = 'Enter information below to create a category';
+    header.innerText = 'Create category';
    
     let categoryNameLabel = document.createElement('label');
+    categoryNameLabel.textContent = `Enter category name`
     let categoryNameInput = document.createElement('input');
     categoryNameInput.type = 'text';
     categoryNameInput.placeholder = 'Category Name';
